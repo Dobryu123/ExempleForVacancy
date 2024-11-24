@@ -12,7 +12,10 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body class="bodyrepair">
-    <header>
+    <?php
+      require "/OpenServer/domains/RM/blocks/header.php"; 
+    ?>
+    <!-- <header>
       <div class="headerlinks">
         <a href="/main/index.html">
           <img
@@ -37,7 +40,7 @@
           </span>
         </div>
       </div>
-    </header>
+    </header> -->
     <div class="bodystyle">
       <div class="text_on_image_R">
         <div class="text_on_image_A" style="width: 50%">
@@ -66,7 +69,10 @@
         </div>
       </div>
     </div>
-    <footer style="background-color: #c3c3c3">
+    <?php
+      require "/OpenServer/domains/RM/blocks/footer.php"; 
+    ?>
+    <!-- <footer style="background-color: #c3c3c3">
       <div class="footermenu">
         <div>
           <img
@@ -106,6 +112,6 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>

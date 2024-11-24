@@ -12,7 +12,10 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <header>
+    <?php
+      require "/OpenServer/domains/RM/blocks/header.php"; 
+    ?>
+    <!-- <header>
       <div class="headerlinks">
         <a href="/main/index.html">
           <img
@@ -37,7 +40,7 @@
           </span>
         </div>
       </div>
-    </header>
+    </header> -->
     <div class="bodystyle">
       <h1 style="margin: 10px">О компании</h1>
       <div class="text_on_image_R">
@@ -76,7 +79,10 @@
         <img src="img2dark.jpg" alt="Команда РМ" />
       </div>
     </div>
-    <footer style="background-color: #c3c3c3">
+    <?php
+      require "/OpenServer/domains/RM/blocks/footer.php"; 
+    ?>
+    <!-- <footer style="background-color: #c3c3c3">
       <div class="footermenu">
         <div>
           <img
@@ -116,6 +122,6 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>

@@ -13,7 +13,10 @@
     <script src="/js/javascript.js"></script>
   </head>
   <body>
-    <header>
+    <?php
+      require "/OpenServer/domains/RM/blocks/header.php"; 
+    ?>
+    <!-- <header>
       <div class="headerlinks">
         <a href="/main/index.html">
           <img
@@ -43,7 +46,7 @@
           </span>
         </div>
       </div>
-    </header>
+    </header> -->
     <div class="bodystyle" min-height: 500px">
       <form name="gost" method="post" enctype="multipart/form-data" class="Marketing_form" onsubmit="return checkIt()">
         <div>
@@ -320,7 +323,10 @@
         </div>
       </form>
     </div>
-    <footer>
+    <?php
+      require "/OpenServer/domains/RM/blocks/footer.php"; 
+    ?>
+    <!-- <footer>
       <div class="footermenu">
         <div>
           <img
@@ -360,6 +366,6 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>

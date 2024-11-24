@@ -12,7 +12,10 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <header>
+    <?php
+      require "/OpenServer/domains/RM/blocks/header.php"; 
+    ?>
+    <!-- <header>
       <div class="headerlinks">
         <a href="/main/index.html">
           <img
@@ -37,7 +40,7 @@
           </span>
         </div>
       </div>
-    </header>
+    </header> -->
     <div class="bodystyle">
       <div class="Welcome_block">
         <img src="Welcome.jpg" alt="Квадроциклы" class="Welcome_block" />
@@ -107,7 +110,10 @@
         </div>
       </div>
     </div>
-    <footer>
+    <?php
+      require "/OpenServer/domains/RM/blocks/footer.php"; 
+    ?>
+    <!-- <footer>
       <div class="footermenu">
         <div>
           <img
@@ -147,6 +153,6 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>

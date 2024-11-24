@@ -8,11 +8,14 @@
       href="/images/logo-shortcut.png"
       type="image/png"
     />
-    <title>Квадроциклы</title>
+    <title>Регистрация</title>
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <header>
+    <?php
+      require "/OpenServer/domains/RM/blocks/header.php"; 
+    ?>
+    <!-- <header>
       <div class="headerlinks">
         <a href="/main/index.html">
           <img
@@ -37,90 +40,43 @@
           </span>
         </div>
       </div>
-    </header>
+    </header> -->
     <div class="bodystyle">
-      <div>
-        <h1>Квадроциклы</h1>
-      </div>
-      <div>
-        <div class="catalog">
-          <div class="catalog_item">
-            <img src="/catalog/РМ 800 Т.jpg" alt="РМ 800 Т" />
-            <div class="catalog_item_text">
-              <div>
-                <h2>РМ 800 Т</h2>
-                <p>
-                  Квадроцикл с идеальным сочетанием скорости, проходимости и
-                  комфорта.
-                </p>
-              </div>
-              <div class="catalog_item_text_bottom">
-                <p>Цена: 1 149 000 ₽</p>
-                <button>Заказать</button>
-              </div>
-            </div>
+      <div class="Register">
+        <div style="padding-bottom: 40px">
+          <div style="margin-bottom: 10px">
+            <input placeholder="Имя" type="text" name="name" />
           </div>
-          <div class="catalog_item">
-            <img src="/catalog/РМ 650-2.jpeg" alt="РМ 650-2" />
-            <div class="catalog_item_text">
-              <div>
-                <h2>РМ 650-2</h2>
-                <p>
-                  Квадроцикл с идеальным сочетанием скорости, проходимости и
-                  комфорта.
-                </p>
-              </div>
-              <div class="catalog_item_text_bottom">
-                <p>Цена: 1 149 000 ₽</p>
-                <button>Заказать</button>
-              </div>
-            </div>
+          <div style="margin-bottom: 10px">
+            <input placeholder="Почта" type="email" name="email" />
           </div>
-        </div>
-      </div>
-
-      <div>
-        <div class="catalog">
-          <div class="catalog_item">
-            <img src="/catalog/РМ 500-2.jpg" alt="РМ 500-2" />
-
-            <div class="catalog_item_text">
-              <div>
-                <h2>РМ 500-2</h2>
-                <p>
-                  Квадроцикл с идеальным сочетанием скорости, проходимости и
-                  комфорта.
-                </p>
-              </div>
-              <div class="catalog_item_text_bottom">
-                <p>Цена: 1 149 000 ₽</p>
-                <button>Заказать</button>
-              </div>
-            </div>
+          <div style="margin-bottom: 10px">
+            <input placeholder="Номер телефона" type="tel" name="phone" />
           </div>
-          <!------ cataloge item -------->
-          <div class="catalog_item">
-            <img
-              src="/catalog/Грузовая платформа.jpg"
-              alt="Грузовая платформа"
+          <div style="margin-bottom: 10px">
+            <input
+              placeholder="Введите пароль"
+              type="password"
+              name="UserPass"
             />
-
-            <div class="catalog_item_text">
-              <div>
-                <h2>Грузовая платформа</h2>
-                <p>Самая надёжная грузовая платформа для квадроциклов</p>
-              </div>
-              <div class="catalog_item_text_bottom">
-                <p>Цена: 549 000 ₽</p>
-                <button>Заказать</button>
-              </div>
-            </div>
+          </div>
+          <div style="margin-bottom: 10px">
+            <input
+              placeholder="Повторите пароль"
+              type="password"
+              name="UserPass2"
+            />
+          </div>
+          <div>
+            <button style="margin-left: 25%">Регистрация</button>
           </div>
         </div>
       </div>
     </div>
-
-    <footer style="background-color: #c3c3c3">
+    <?php
+      require "/OpenServer/domains/RM/blocks/footer.php"; 
+    ?>
+    <!-- <footer style="background-color: #c3c3c3">
       <div class="footermenu">
         <div>
           <img
@@ -160,6 +116,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>
+

@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,9 +12,12 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <header>
+    <?php
+      require "/OpenServer/domains/RM/blocks/header.php"; 
+    ?>
+    <!-- <header>
       <div class="headerlinks">
-        <a href="/main/index.html">
+        <a href="/main/index.php">
           <img
             src="/images/logo.png"
             alt="Русская механика"
@@ -23,39 +26,42 @@
           />
         </a>
         <span class="headerblock1">
-          <a href="/company/index.html"> О компании </a>
-          <a href="/catalog/index.html"> Каталог </a>
-          <a href="/repair/index.html"> Ремонт и обслуживание </a>
-          <a href="/marketing_form/index.html"> Опрос </a>
+          <a href="/company/index.php"> О компании </a>
+          <a href="/catalog/index.php"> Каталог </a>
+          <a href="/repair/index.php"> Ремонт и обслуживание </a>
+          <a href="/marketing_form/index.php"> Опрос </a>
         </span>
         <div class="headerblock2">
           <span style="float: right">
-            <a href="/registration/index.html"> Регистрация </a>
+            <a href="/registration/index.php"> Регистрация </a>
             <span>
-              <a href="/autoriztion/index.html" class="Enter_Btn"> Войти </a>
+              <a href="/autoriztion/index.php" class="Enter_Btn"> Войти </a>
             </span>
           </span>
         </div>
       </div>
-    </header>
+    </header> -->
     <div class="bodystyle">
       <h1>Каталог</h1>
       <div class="catalog_menu">
         <div>
-          <a href="quad.html">
+          <a href="quad.php">
             <img src="quadro.jpg" alt="Квадроциклы" width="200" />
             <h2>Квадроциклы</h2>
           </a>
         </div>
         <div>
-          <a href="snow.html">
+          <a href="snow.php">
             <img src="Snowbike.jpg" alt="снегоходы" width="200" />
             <h2>Снегоходы</h2>
           </a>
         </div>
       </div>
     </div>
-    <footer style="background-color: #c3c3c3">
+    <?php
+      require "/OpenServer/domains/RM/blocks/footer.php"; 
+    ?>
+    <!-- <footer style="background-color: #c3c3c3">
       <div class="footermenu">
         <div>
           <img
@@ -64,11 +70,11 @@
             class="footerlogo"
           />
           <div class="footerlinks">
-            <a href="/main/index.html"> Главная </a><br />
-            <a href="/company/index.html"> О компании </a><br />
-            <a href="/catalog/index.html"> Каталог </a><br />
-            <a href="/repair/index.html"> Ремонт и обслуживание </a><br />
-            <a href="/autoriztion/index.html"> Личный кабинет </a>
+            <a href="/main/index.php"> Главная </a><br />
+            <a href="/company/index.php"> О компании </a><br />
+            <a href="/catalog/index.php"> Каталог </a><br />
+            <a href="/repair/index.php"> Ремонт и обслуживание </a><br />
+            <a href="/autoriztion/index.php"> Личный кабинет </a>
           </div>
         </div>
         <div class="footer_right_menu">
@@ -95,6 +101,6 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </body>
-</html>
+</php>
