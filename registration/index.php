@@ -1,3 +1,6 @@
+<?php
+      session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,6 +12,7 @@
       type="image/png"
     />
     <title>Регистрация</title>
+    <script src="/js/javascript.js"></script>
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
@@ -43,24 +47,26 @@
     </header> -->
     <div class="bodystyle">
       <div class="Register">
-        <div style="padding-bottom: 40px">
-          <div style="margin-bottom: 10px">
+        <form style="padding-bottom: 40px" method="post" action="registration.php" onsubmit="return check_register()">
+          <div >
             <input placeholder="Имя" type="text" name="name" />
           </div>
-          <div style="margin-bottom: 10px">
+          <div >
             <input placeholder="Почта" type="email" name="email" />
+            <div class="error_text"><?=$_SESSION['email_error']?></div>
           </div>
-          <div style="margin-bottom: 10px">
+          <div >
             <input placeholder="Номер телефона" type="tel" name="phone" />
+            <div class="error_text"><?=$_SESSION['phone_error']?></div>
           </div>
-          <div style="margin-bottom: 10px">
+          <div >
             <input
               placeholder="Введите пароль"
               type="password"
               name="UserPass"
             />
           </div>
-          <div style="margin-bottom: 10px">
+          <div >
             <input
               placeholder="Повторите пароль"
               type="password"
@@ -70,7 +76,7 @@
           <div>
             <button style="margin-left: 25%">Регистрация</button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
     <?php

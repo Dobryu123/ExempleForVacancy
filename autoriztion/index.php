@@ -1,3 +1,6 @@
+<?php
+      session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,6 +12,7 @@
       type="image/png"
     />
     <title>Авторизация</title>
+    <script src="/js/javascript.js"></script>
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
@@ -44,15 +48,18 @@
     <div class="bodystyle">
       <div class="auth">
         <div style="padding-bottom: 40px">
-          <div>
-            <input placeholder="Логин" type="text" name="Login" />
-          </div>
-          <div style="margin-bottom: 10px">
-            <input placeholder="Пароль" type="password" name="UserPass" />
-          </div>
-          <div>
-            <button>Войти</button>
-          </div>
+          <form action="/autorize.php" method="post" onsubmit="return check_autorize()">
+            <div>
+              <input placeholder="Почта" type="email" name="email" />
+            </div>
+            <div style="margin-bottom: 10px">
+              <input placeholder="Пароль" type="password" name="UserPass" />
+              <div class="error_text"><?=$_SESSION['auth_error']?></div>
+            </div>
+            <div>
+              <input type="submit" class="autorize" value="Войти">
+            </div>
+          </form>
         </div>
       </div>
     </div>

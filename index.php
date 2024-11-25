@@ -7,20 +7,12 @@
 </head>
 <body>
     <?php
-    $arr = [
-        "Иван" => ["Возраст" => 24, "Хобби" => "Программирование", "Пол" => "Мужской"],
-        "Ася" => ["Возраст" => 22, "Хобби" => "Рисование", "Пол" => "Женский"],
-        "Вафля" => ["Возраст" => 1.5, "Хобби" => "Драть обои", "Пол" => "Женский"]
-    ];
-    foreach ($arr as $key => $value){
-        echo "<b>Имя: $key </b><br>";
-        foreach($value as $subkey => $subvalue){
-            echo "      $subkey: $subvalue<br>";
+        if (isset($_COOKIE['logged_email'])) {
+            echo "Кука: " . $_COOKIE['logged_email'];
+        } else {
+            echo "Кука не найдена.";
         }
-        echo "<br><br>";
-    }
-
+        
     ?>
-
 </body>
 </html>

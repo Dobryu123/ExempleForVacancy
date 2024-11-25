@@ -48,7 +48,7 @@
       </div>
     </header> -->
     <div class="bodystyle" min-height: 500px">
-      <form name="gost" method="post" enctype="multipart/form-data" class="Marketing_form" onsubmit="return checkIt()">
+      <form name="gost" method="post" enctype="multipart/form-data" class="Marketing_form" onsubmit="return checkIt()" action="check_form.php">
         <div>
           <div>
             <p style="margin-top: 30px">Введите имя</p>
@@ -57,7 +57,6 @@
               type="text"
               name="name"
               class="Marketing_input"
-
             />
           </div>
           <div>
@@ -67,6 +66,8 @@
               type="email"
               name="email"
               class="Marketing_input"
+              value="<?=$_COOKIE['logged_email']?>"
+              readonly
             />
           </div>
           <div class="Marketing_input_checkbox">
@@ -75,7 +76,7 @@
               <input
                 type="radio"
                 id="man"
-                name="sex"
+                name="gender"
                 value="man"
                 checked
               />
@@ -85,7 +86,7 @@
               <input
                 type="radio"
                 id="woman"
-                name="sex"
+                name="gender"
                 value="woman"
               />
               <label for="woman">Женский</label>
@@ -94,38 +95,38 @@
           <div class="Marketing_input_checkbox">
             <p>Какая акция Вам наиболее интересна:</p>
             <div>
-              <input type="radio" id="oil" name="act" value="oil" checked />
+              <input type="radio" id="oil" name="promo" value="oil" checked />
               <label for="oil">Промокод на замену масла</label>
             </div>
             <div>
-              <input type="radio" id="equip" name="act" value="equip" />
+              <input type="radio" id="equip" name="promo" value="equip" />
               <label for="equip">Скидка на экипировку 20%</label>
             </div>
             <div>
-              <input type="radio" id="tires" name="act" value="tires" />
+              <input type="radio" id="tires" name="promo" value="tires" />
               <label for="equip">Комплект зимней резины в подарок</label>
             </div>
           </div>
           <div class="Marketing_input_checkbox">
             <p>Как вы узнали о нашей компании:</p>
             <div>
-              <input type="checkbox" id="radio" name="radio" />
+              <input type="checkbox" id="radio" name="info" />
               <label for="radio">Из рекламы на радио</label>
             </div>
             <div>
-              <input type="checkbox" id="magazine" name="magazine" />
+              <input type="checkbox" id="magazine" name="info" />
               <label for="magazine">Из рекламы в журнале</label>
             </div>
             <div>
-              <input type="checkbox" id="tv" name="tv" />
+              <input type="checkbox" id="tv" name="info" />
               <label for="tv">Из рекламы на ТV</label>
             </div>
             <div>
-              <input type="checkbox" id="Internet" name="Internet" />
+              <input type="checkbox" id="Internet" name="info" />
               <label for="Internet">Из рекламы в Internet</label>
             </div>
             <div>
-              <input type="checkbox" id="friends" name="friends" />
+              <input type="checkbox" id="friends" name="info" />
               <label for="friends">От друзей, коллег</label>
             </div>
             <div>
@@ -140,12 +141,12 @@
             <div>
               <input
                 type="radio"
-                id="active"
+                id="promoive"
                 name="ForWhat"
-                value="active"
+                value="promoive"
                 checked
               />
-              <label for="active">Для активного отдыха и развлечений</label>
+              <label for="promoive">Для активного отдыха и развлечений</label>
             </div>
             <div>
               <input type="radio" id="hunt" name="ForWhat" value="hunt" />
@@ -198,7 +199,7 @@
                 type="radio"
                 id="halfmil"
                 name="budget"
-                value="halfmil"
+                value="less 0.5"
                 checked
               />
               <label for="halfmil">До 500 000 руб.</label>
@@ -208,7 +209,7 @@
                 type="radio"
                 id="mil"
                 name="budget"
-                value="mil"
+                value="0.5 - 1"
               />
               <label for="mil">500 000 – 1 000 000 руб.</label>
             </div>
@@ -217,7 +218,7 @@
                 type="radio"
                 id="OneAndHalf"
                 name="budget"
-                value="OneAndHalf"
+                value="1 - 1.5"
               />
               <label for="OneAndHalf">1 000 000 – 1 500 000 руб.</label>
             </div>
@@ -226,7 +227,7 @@
                 type="radio"
                 id="more"
                 name="budget"
-                value="more"
+                value="More then 1.5"
               />
               <label for="more">Более 1 500 000 руб.</label>
             </div>
@@ -274,43 +275,43 @@
           <div class="Marketing_input_checkbox">
             <p>Что для вас наиболее важно при выборе квадроцикла или снегохода:</p>
             <div>
-              <input type="checkbox" id="Power" name="Power" />
+              <input type="checkbox" id="Power" name="main_criteria " />
               <label for="Power">Высокая проходимость и мощность</label>
             </div>
             <div>
-              <input type="checkbox" id="comfort" name="comfort" />
+              <input type="checkbox" id="comfort" name="main_criteria " />
               <label for="comfort">Комфорт и удобство управления</label>
             </div>
             <div>
-              <input type="checkbox" id="durability" name="durability" />
+              <input type="checkbox" id="durability" name="main_criteria" />
               <label for="durability">Надежность и долговечность</label>
             </div>
             <div>
-              <input type="checkbox" id="price" name="price" />
+              <input type="checkbox" id="price" name="main_criteria" />
               <label for="price">Доступная цена </label>
             </div>
             <div>
-              <input type="checkbox" id="maneuverability" name="maneuverability" />
+              <input type="checkbox" id="maneuverability" name="main_criteria" />
               <label for="maneuverability">Маневренность и легкость в управлении</label>
             </div>
             <div>
-              <input type="checkbox" id="expenses" name="expenses" />
+              <input type="checkbox" id="expenses" name="main_criteria" />
               <label for="expenses">Низкие эксплуатационные расходы</label>
             </div>
             <div>
-              <input type="checkbox" id="safety" name="safety" />
+              <input type="checkbox" id="safety" name="main_criteria" />
               <label for="safety">Безопасность и стабильность на дороге</label>
             </div>
             <div>
-              <input type="checkbox" id="design" name="design" />
+              <input type="checkbox" id="design" name="main_criteria" />
               <label for="design">Стильный дизайн и внешний вид</label>
             </div>
             <div>
-              <input type="checkbox" id="trunk" name="trunk" />
+              <input type="checkbox" id="trunk" name="main_criteria" />
               <label for="trunk">Большой багажный отсек</label>
             </div>
             <div>
-              <input type="checkbox" id="accessories" name="accessories" />
+              <input type="checkbox" id="accessories" name="main_criteria" />
               <label for="accessories">Широкий выбор аксессуаров и опций</label>
             </div>
           </div>

@@ -78,6 +78,10 @@ h6 {
   font-size: inherit;
   font-weight: 400;
 }
+.error_text {
+  color: red;
+  font-size: 14px;
+}
 
 /*-------------------Header--------------------*/
 .headerlinks {
@@ -131,12 +135,13 @@ h1 {
 .button:hover,
 .Marketing_form button:hover,
 .Register button:hover,
-.auth button:hover,
+.autorize:hover,
 .repair button:hover,
 .catalog_item button:hover,
 .Enter_Btn:hover {
   background-color: white;
   color: red;
+  cursor: pointer;
 }
 h2 {
   margin-top: 20px;
@@ -345,21 +350,21 @@ body {
 }
 .auth input {
   font-size: 20px;
-  margin: 10px;
+  margin-top: 20px;
   width: 250px;
   height: 50px;
   padding: 10px;
   border-radius: 10px;
 }
-.auth button {
+.autorize {
   width: 250px;
   height: 50px;
   font-size: 20px;
   background-color: red;
   color: white;
   border-radius: 10px;
-  margin-left: 10px;
   margin-top: 15px;
+  font-weight: bold;
 }
 
 /*-------------------Registration--------------------*/
@@ -371,11 +376,11 @@ body {
 }
 .Register input {
   font-size: 20px;
-  margin: 10px;
   width: 500px;
   height: 50px;
   padding: 10px;
   border-radius: 10px;
+  margin-top: 20px;
 }
 .Register button {
   width: 250px;
