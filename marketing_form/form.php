@@ -1,63 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="/images/logo-shortcut.png"
-      type="image/png"
-    />
-    <title>Заполните форму</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <script src="/js/javascript.js"></script>
-  </head>
-  <body>
-    <?php
-      require "/OpenServer/domains/RM/blocks/header.php"; 
-    ?>
-    <!-- <header>
-      <div class="headerlinks">
-        <a href="/main/index.html">
-          <img
-            src="/images/logo.png"
-            alt="Русская механика"
-            width="150"
-            style="vertical-align: middle"
-          />
-        </a>
-        <span class="headerblock1">
-          <a href="/company/index.html"> О компании </a>
-          <a href="/catalog/index.html"> Каталог </a>
-          <a href="/repair/index.html"> Ремонт и обслуживание </a>
-          <a href="/marketing_form/index.html"> Опрос </a>
-        </span>
-        <div class="headerblock2">
-          <span style="float: right">
-            <a href="/registration/index.html"> Регистрация </a>
-            <span>
-              <a
-              href="/autoriztion/index.html"
-              class="Enter_Btn"
-              >
-              Войти
-            </a>
-            </span>
-          </span>
-        </div>
-      </div>
-    </header> -->
-    <div class="bodystyle">
-      <?php
-        if ($_COOKIE['Form'])
-        {
-          echo "<div style='height: 800px; width: 100%; text-align:center; color: red; font-weight:bold; line-height: 800px;'>Вы уже прошли опрос</div>";
-        } else{
-          require "/OpenServer/domains/RM/marketing_form/form.php"; 
-        }
-
-      ?>
-      <!-- <form name="gost" method="post" enctype="multipart/form-data" class="Marketing_form" onsubmit="return checkIt()" action="check_form.php">
+<form name="gost" method="post" enctype="multipart/form-data" class="Marketing_form" onsubmit="return checkIt()" action="check_form.php">
         <div>
           <div>
             <p style="margin-top: 30px">Введите имя</p>
@@ -119,7 +60,7 @@
           <div class="Marketing_input_checkbox">
             <p>Как вы узнали о нашей компании:</p>
             <div>
-              <input type="radio" id="radio" name="info" value="radio"/>
+              <input type="radio" id="radio" name="info" value="radio" checked/>
               <label for="radio">Из рекламы на радио</label>
             </div>
             <div>
@@ -153,11 +94,12 @@
                 id="activities"
                 name="ForWhat[]"
                 value="activities"
+                checked
               />
               <label for="promoive">Для активного отдыха и развлечений</label>
             </div>
             <div>
-              <input type="checkbox" id="hunt" name="ForWhat[]" value="hunt" />
+              <input type="checkbox" id="hunt" name="ForWhat[]" value="hunt"/>
               <label for="hunt">Для охоты и рыбалки</label>
             </div>
             <div>
@@ -283,7 +225,7 @@
           <div class="Marketing_input_checkbox">
             <p>Что для вас наиболее важно при выборе квадроцикла или снегохода:</p>
             <div>
-              <input type="radio" id="Power" name="main_criteria" value="Power"/>
+              <input type="radio" id="Power" name="main_criteria" value="Power" checked/>
               <label for="Power">Высокая проходимость и мощность</label>
             </div>
             <div>
@@ -330,51 +272,4 @@
           </div>
 
         </div>
-      </form> -->
-    </div>
-    <?php
-      require "/OpenServer/domains/RM/blocks/footer.php"; 
-    ?>
-    <!-- <footer>
-      <div class="footermenu">
-        <div>
-          <img
-            src="\images\logobw.png"
-            alt="Русская механика"
-            class="footerlogo"
-          />
-          <div class="footerlinks">
-            <a href="/main/index.html"> Главная </a><br />
-            <a href="/company/index.html"> О компании </a><br />
-            <a href="/catalog/index.html"> Каталог </a><br />
-            <a href="/repair/index.html"> Ремонт и обслуживание </a><br />
-            <a href="/autoriztion/index.html"> Личный кабинет </a>
-          </div>
-        </div>
-        <div class="footer_right_menu">
-          <div class="footer_right">
-            <div>
-              <div class="social_btn">
-                <a href="https://vk.com/rusmechanics" target="_blank">
-                  <img src="/images/vk.png" alt="Русская механика" />
-                </a>
-                <a
-                  href="https://www.youtube.com/user/RusMechanics"
-                  target="_blank"
-                >
-                  <img src="/images/yt.png" alt="Русская механика" />
-                </a>
-                <a href="https://t.me/russianmechanics" target="_blank">
-                  <img src="/images/tg.png" alt="Русская механика" />
-                </a>
-              </div>
-              <span>
-                <p>© 2004–2024 АО «Русская механика»</p>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer> -->
-  </body>
-</html>
+      </form>
